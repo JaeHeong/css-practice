@@ -1,0 +1,80 @@
+.body-wave {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wave-box {
+  background-color: #fbfcf3;
+  height: 800px;
+  width: 800px;
+  box-shadow: rgba(23, 55, 87, 0.1) 0px 15px 35px 0px,
+    rgba(0, 0, 0, 0.07) 0px 5px 15px 0px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.wave {
+  position: absolute;
+  left: -350px;
+  height: 1500px;
+  width: 1500px;
+  border-radius: 43%;
+  opacity: 0.2;
+  transform: rotate(30turn);
+}
+
+.wave-one {
+  background-color: red;
+  animation: wave 5s linear infinite;
+  bottom: 20%;
+  opacity: 0.3;
+}
+
+.wave-two {
+  background-color: rgb(223, 236, 190);
+  animation: wave 7s linear infinite;
+  bottom: 23%;
+  right: 10%;
+  opacity: 0.4;
+}
+
+.wave-three {
+  background-color: blueviolet;
+  bottom: 20%;
+  animation: wave 8s linear infinite;
+}
+
+.wave-title {
+  margin-top: 200px;
+  width: 50%;
+  margin-left: 200px;
+  font-size: 80px;
+  height: 106px;
+  color: rgb(7, 2, 255);
+}
+
+.wave-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #b92b32 10%, #d41f98 40%, white);
+  opacity: 0.4;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
